@@ -1,5 +1,5 @@
 #!/bin/bash
-cp /var/www/html/wp-config.sample.php /var/www/html/wp-config.php
+cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 wget https://api.wordpress.org/secret-key/1.1/salt/ -O salt.txt
 sed -i '51,58d' /var/www/html/wp-config.php
 cat salt.txt >> /var/www/html/wp-config.php
